@@ -35,6 +35,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Yggdroot/indentLine'
 
 call vundle#end()
 filetype plugin indent on
