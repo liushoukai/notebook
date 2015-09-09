@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# Used for committing tracked files by SVN
-# author: LSK
-
-
-USAGE="\e[1;32mUsage: $0 message \e[0m"
+# 用于Linux环境下，SVN的文件提交
+# Author: LSK
 
 echo -e "\e[1;32m**********************************\e[0m"
 echo -e "\e[1;32m*                                *\e[0m"
@@ -12,21 +9,36 @@ echo -e "\e[1;32m*      Tools for SVN commit      *\e[0m"
 echo -e "\e[1;32m*                                *\e[0m"
 echo -e "\e[1;32m**********************************\e[0m"
 
+#41 42 43 44 45 红 绿 黄 蓝 粉
+TIPS="\e[1;42mTIPS\e[0m"
+INFO="\e[1;44mINFO\e[0m"
+WARN="\e[1;43mWARN\e[0m"
+ERROR="\e[1;41mERROR\e[0m"
 
-exclude_arr=('para_check.php' 'class_map.php' 'static' '?')
+USAGE="$TIPS Usage: $0 message"
 
-exclude=""
+EXCLUDE_ARR=('para_check.php' 'class_map.php' 'static' '?')
+EXCLUDE=""
 
 echo
 echo -e "\e[1;32mExclude File & Directory\e[0m"
-for value in ${exclude_arr[*]}; do
+for value in ${EXCLUDE_ARR[*]}; do
     if [ $value != '?' ]; then
         echo -e "\e[1;32m* $value\e[0m"
     fi
-    exclude=`echo "$exclude | grep -v $value"`
+    EXCLUDE=`echo "$EXCLUDE | grep -v $value"`
 done
 echo
 
+#处理SVN错误异常
+svn info &> /tmp/commitor.$$
+if [ $? -ne 0 ]; then
+    tmp=`cat /tmp/commitor.$$`
+    echo -e "$ERROR $tmp"
+    exit 0
+fi
+
+#判断参数是否正确
 if [ $# -ne 1 ]; then
     echo -e $USAGE
     exit 0
@@ -34,11 +46,12 @@ fi
 
 MESSAGE=$1
 
-tmp="svn st$exclude | awk '{print \$2}'|xargs echo|xargs -I {} echo svn commit {} -m $MESSAGE"
+tmp="svn st$EXCLUDE | awk '{print \$2}'|xargs echo|xargs -I {} echo svn commit {} -m $MESSAGE"
 
 task=`echo $tmp | sh`
-echo -e "\e[1;42mRun Task\e[0m \e[1;32m$task\e[0m"
 
-
-
-
+if [ -z "$task" ]; then
+    echo -e "$WARN No uncommited files!"
+else
+    echo -e "$INFO $task"
+fi
