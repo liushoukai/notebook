@@ -6,8 +6,12 @@
 
 1. 安装git
 2. $git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-3. 在~/.vimrc文件中添加bundle的配置，具体请参考附件
+3. 在~/.vimrc文件中添加bundle的配置
 4. $vim +BundleInstall +qall
+   安装:PluginInstall
+   更新:pluginUpdate
+   删除:pluginClean
+   搜索:PluginSearch
 
 ###Yggdroot/indentLine插件
 
