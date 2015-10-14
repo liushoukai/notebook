@@ -1,21 +1,43 @@
-##Vim插件
+#Vim插件
 
-###安装vundle插件
+##Vundle
 
->vim插件管理
+###安装Git
 
-1. 安装git
-2. $git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-3. 在~/.vimrc文件中添加bundle的配置
-4. $vim +BundleInstall +qall
-   安装:PluginInstall
-   更新:pluginUpdate
-   删除:pluginClean
-   搜索:PluginSearch
+```
+sudo apt-get install git
+```
 
-###Yggdroot/indentLine插件
+###下载Vundle
 
->代码缩进显示
+```
+$git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+###在~/.vimrc文件中添加bundle配置
+
+```
+cd ~;wget https://raw.githubusercontent.com/liushoukai/notebook/master/vim/.vimrc
+```
+
+###安装bundle
+
+```
+$vim +BundleInstall +qall
+```
+
+###常用指令
+
+```
+安装:PluginInstall
+更新:pluginUpdate
+删除:pluginClean
+搜索:PluginSearch
+```
+
+##Yggdroot/indentLine插件
+
+代码缩进显示
 
 1. :IndentLinesToggle  //开启\关闭显示缩进
 2. :LeadingSpaceToggle //开启\关闭显示空格
