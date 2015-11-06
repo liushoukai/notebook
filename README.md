@@ -1,9 +1,9 @@
 # notebook
 
-记录常用的软件配置信息以及服务器脚本
+> a notebook to record some forgettable configs.
 
-1. Fiddler的CustomRules配置
-2. Mysql.ini配置
-3. 常用bash脚本
+- CustomRules for Fiddler
+- mysql.ini 
+- Common shell programs
 
 
