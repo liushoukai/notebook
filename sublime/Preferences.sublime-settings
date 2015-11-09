@@ -1,0 +1,13 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by file type specific settings.
+{
+	//"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+    "draw_white_space": "selection",
+    "font_face": "Courier New",
+    "font_size": 12,
+    "highlight_line": true,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": false,
+    "show_encoding": true,
+    "show_line_endings": true
+}
