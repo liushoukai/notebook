@@ -1,8 +1,9 @@
 # Sublime Config
 
-1. Used for sublime with linux version.
-2. Put config files under ~/.config/sublime-text-3/Packages/User.
-3. See sublime2/3 activation code below
+## Usage
+Put config files under ~/.config/sublime-text-3/Packages/User.
+
+## Sublime2/3 License
 
 ```
 —– BEGIN LICENSE —–
@@ -19,6 +20,19 @@ E1D0AE85 A0BBD039 0E9C8D55 E1B89D5D
 B98FC99C 8FAC73EE D2B95564 DF450523
 —— END LICENSE ——
 ```
+
+## Packages
+- Project Manager
+- Emmet
+- Emmet Css Snippets
+- Compare Side-By-Side
+- SideBarEnhancements
+- SublimeCodeIntel
+- SublimeLinter
+- Tortoise​SVN
+- HTML-CSS-JS Prettify
+- Bootstrap 3 Snippets
+- Diffy
 
 
 
