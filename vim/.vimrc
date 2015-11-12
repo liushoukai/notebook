@@ -4,10 +4,6 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
-" Enable filetype plugins
-" filetype plugin on
-" filetype indent on
-
 " Set to auto read when a file is changed from the outside
 set autoread
 
@@ -17,11 +13,7 @@ set autoread
 " let g:mapleader = ","
 
 " :W sudo saves the file 
-" (useful for handling the permission-denied error)
-"command W w !sudo tee % > /dev/null
-
-
-
+command W w !sudo tee % > /dev/null
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vundle plugin
@@ -31,28 +23,24 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Let Vundle manage itself
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdtree'
+
+" Plugins
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'Yggdroot/indentLine'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => alrLine plugin
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
 
-"syntax enable
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
-let g:airline_powerline_fonts = 0
-let g:airline_theme='kolor'
-
+" Always show statusline
 set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
 
@@ -75,13 +63,8 @@ set ruler
 
 " Enable syntax highlighting
 syntax enable 
-
-try 
-    colorscheme desert
-catch
-endtry
-
-set background=dark
+colorscheme monokai
+"set background=dark
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
