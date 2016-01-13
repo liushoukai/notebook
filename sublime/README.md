@@ -40,6 +40,8 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 - `Tortoise​SVN`
 - `HTML-CSS-JS Prettify`
 - `Bootstrap 3 Snippets`
+- `DocBlockr`
+- `Project Manager`
 
 
 
