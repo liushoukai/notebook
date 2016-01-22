@@ -1,4 +1,11 @@
-# Sublime Config
+# Sublime
+
+[1]:https://packagecontrol.io/
+[2]:https://www.sublimetext.com/docs/3/index.html
+
+## Site
+- [**Package Control**][1]
+- [**Sublime Text 3 Documentation**][2]
 
 ## Usage
 Put config files under ~/.config/sublime-text-3/Packages/User.
@@ -31,19 +38,19 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 ```
 
 ## Recommand Packages
-- `Emmet`
-- `Emmet Css Snippets`
-- `Compare Side-By-Side`
-- `SideBarEnhancements`
-- `SublimeCodeIntel`
-- `SublimeLinter`
-- `Tortoise​SVN`
-- `HTML-CSS-JS Prettify`
-- `Bootstrap 3 Snippets`
-- `DocBlockr`
-- `Project Manager`
-- `LiveStyle`
-- `VBScript`
+- [**Emmet**](https://packagecontrol.io/packages/Emmet)
+- [**Emmet Css Snippets**]()
+- [**Compare Side-By-Side**]()
+- [**SideBarEnhancements**]()
+- [**SublimeCodeIntel**]()
+- [**SublimeLinter**]()
+- [**Tortoise​SVN**]()
+- [**HTML-CSS-JS Prettify**]()
+- [**Bootstrap 3 Snippets**]()
+- [**DocBlockr**]()
+- [**Project Manager**]()
+- [**LiveStyle**]()
+- [**VBScript**](https://packagecontrol.io/packages/VBScript)
 
 
 
