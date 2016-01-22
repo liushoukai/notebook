@@ -43,6 +43,7 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 - `DocBlockr`
 - `Project Manager`
 - `LiveStyle`
+- `VBScript`
 
 
 
