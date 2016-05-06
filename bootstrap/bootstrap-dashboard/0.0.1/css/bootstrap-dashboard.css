@@ -1,0 +1,114 @@
+/* Twitter Bootstrap - 100% Height
+-------------------------------------------------- */
+.wrapper .row {
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.box {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Move down content because we have a fixed navbar
+   that is 50px tall
+-------------------------------------------------- */
+body {
+  padding-top: 50px;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 40px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #101010; /* background-color: #f5f5f5; */
+}
+.footer p {
+  text-align: center;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Siderbar metisMenu styles
+----------------------------------------------- */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    min-height: 100%;
+    display: block;
+    float: left;
+    width: 250px;
+    background: #333;
+    padding-top: 50px;
+  }
+}
+.content {
+  display: block;
+  overflow: hidden;
+  width: auto;
+  padding-top: 50px;
+}
+.sidebar-nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background-image: -webkit-linear-gradient(left, color-stop(#333333 10px), color-stop(#222222 10px));
+  background-image: linear-gradient(to right, #333333 10px, #222222 10px);
+  background-repeat: repeat-x;
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff222222', GradientType=1);
+}
+.sidebar-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sidebar-nav a, .sidebar-nav a:hover, .sidebar-nav a:focus, .sidebar-nav a:active {
+  outline: none;
+}
+.sidebar-nav ul li, .sidebar-nav ul a {
+  display: block;
+}
+.sidebar-nav ul a {
+  padding: 10px 20px;
+  color: #aaa;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+}
+.sidebar-nav ul a:hover, .sidebar-nav ul a:focus, .sidebar-nav ul a:active {
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar-nav ul ul a {
+  padding: 10px 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar-nav ul ul a:hover, .sidebar-nav ul ul a:focus, .sidebar-nav ul ul a:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.sidebar-nav-item {
+  padding-left: 5px;
+}
+.sidebar-nav-item-icon {
+  padding-right: 5px;
+}
+#rtlh3 small {
+    transform: rotateY(180deg);
+    display: inline-block;
+}
