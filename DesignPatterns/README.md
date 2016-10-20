@@ -1,6 +1,6 @@
 # DESIGN PATTERNS
 
-## 设计模式六设计原则
+### 设计模式六设计原则
 
 ### 单一职责原则(Single Responsibility Principle，SRP)
 
