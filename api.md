@@ -29,9 +29,7 @@ GOP.tip('保存成功'， function() {
 
 #### 使用示例
 ```javascript
-<script src="text/javascript">
-    GOP.get("/doc/getDocList.do", {current:1}, function(data) { console.info(data); });
-</script>
+GOP.get("/doc/getDocList.do", {current:1}, function(data) { console.info(data); });
 ```
 
 ### GOP.post(url, data, callback)
@@ -55,11 +53,9 @@ callback 用户选择确认后的回调函数
 
 #### 使用示例
 ```javascript
-<script src="text/javascript">
 GOP.confirm('确定要删除该记录？'， function() {
    console.debug("do something");
 });
-</script>
 ```
 
 ### GOP.serializeForm2Json($form)
@@ -74,10 +70,8 @@ GOP.confirm('确定要删除该记录？'， function() {
 #### 使用示例
 
 ```javascript
-<script src="text/javascript">
 var formJson = GOP.serializeForm2Json($("form"));
 console.info(formJson);
-</script>
 ```
 
 ### GOP.validateForm($form)
@@ -106,11 +100,12 @@ $form jQuery的form对象
 - data-parsley-equalto="#anotherfield"
 
 #### 使用示例
-```
+```html
 <form id="form1">
-<input type="text" name="email" data-parsley-required="true" data-parsley-type="email"/>
+   <input type="text" name="email" data-parsley-required="true" data-parsley-type="email"/>
 </form>
-
+```
+```javascript
 <script src="text/javascript">
 //检验表单新增项合法
 function validAddForm(flag) {
