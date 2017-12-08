@@ -89,21 +89,21 @@ $form jQuery的form对象
 
 #### 使用说明
 1.依赖Parseley插件，详见官网：http://parsleyjs.org/doc/index.html
-data-parsley-required="true"
-data-parsley-type="email"
-data-parsley-type="number"
-data-parsley-type="integer"
-data-parsley-type="digits"
-data-parsley-type="alphanum"
-data-parsley-type="url"
-data-parsley-minlength="6"
-data-parsley-max="6"
-data-parsley-range="[6, 10]"
-data-parsley-pattern="\d+"
-data-parsley-mincheck="3"
-data-parsley-maxcheck="3"
-data-parsley-check="[1, 3]"
-data-parsley-equalto="#anotherfield"
+- data-parsley-required="true"
+- data-parsley-type="email"
+- data-parsley-type="number"
+- data-parsley-type="integer"
+- data-parsley-type="digits"
+- data-parsley-type="alphanum"
+- data-parsley-type="url"
+- data-parsley-minlength="6"
+- data-parsley-max="6"
+- data-parsley-range="[6, 10]"
+- data-parsley-pattern="\d+"
+- data-parsley-mincheck="3"
+- data-parsley-maxcheck="3"
+- data-parsley-check="[1, 3]"
+- data-parsley-equalto="#anotherfield"
 
 #### 使用示例
 ```
