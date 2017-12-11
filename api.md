@@ -129,18 +129,17 @@ $tableGrid jQuery的table对象
 <table id="tableGrid" data-grid-template="dataListTpl">
     <thead>
         <tr>
-            <th><p1>ID</p1></th>
-            <th><p1>项目名称</p1></th>
-            <th><p1>压测验收时间</p1></th>
-            <th><p1>不删档服时间</p1></th>
-            <th><p1>正式上线时间</p1></th>
-            <th><p1>产品确认状态</p1></th>
+            <th>项目名称</th>
+            <th>压测验收时间</th>
+            <th>不删档服时间</th>
+            <th>正式上线时间</th>
+            <th>产品确认状态</th>
         </tr>
     </thead>
 </table>
 <script type="text/template" id="dataListTpl">
     {{each object as value i}}
-    <tr>
+    <tr data-id={{value.id}}>
         <td>{{ value.projectId}}</td>
         <td><a onclick="showDetail({{ value.projectId}})" >{{ value.gameName}}</a></td>
         <td>{{formatDate value.pressureTestTime}}</td>
