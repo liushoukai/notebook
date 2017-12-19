@@ -1,13 +1,46 @@
 ## 前端公用库使用说明
 
 ### GOP.tips(msg, callback)
+
 #### 功能描述
 用户保存、删除成功后的通用提示弹框，该模态提示弹窗会在1.2秒后自动关闭。
+
+#### 源代码
+```javascript
+/**
+ * 提示框
+ *
+ * @param message   提示信息
+ * @param callback  回调函数
+ */
+function tips(message, callback) {
+    if (typeof message === 'undefined' || message.length < 1) {
+        return false;
+    }
+    BootstrapDialog.show({
+        title: '提示信息',
+        message: message,
+        onshown: function(dialog) {
+            dialog.enableButtons(false);
+            dialog.setClosable(false);
+            setTimeout(function() {
+                dialog.close();
+                if (typeof callback === 'function') {
+                    callback();
+                }
+            }, 1500);
+        }
+    });
+}
+```
 #### 参数说明
 | 参数       | 参数说明        |
 | -------- | ----------- |
 | msg      | 提示信息        |
 | callback | 提示框显示后的回调函数 |
+
+#### 依赖库包
+[https://github.com/nakupanda/bootstrap3-dialog](https://github.com/nakupanda/bootstrap3-dialog)
 
 #### 使用示例
 ```js
