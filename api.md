@@ -108,7 +108,7 @@ $form jQuery的form对象
 ```javascript
 <script src="text/javascript">
 //获取待验证表单元素
-$form = $("#form");
+var $form = $("#form");
 //检验表单新增项合法
  if (GOP.validateForm($form)) {
      // 成功后的操作
