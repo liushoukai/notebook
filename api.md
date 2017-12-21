@@ -80,9 +80,35 @@ GOP.post("/doc/getDocList.do", {current:1}, function(data) { console.info(data);
 ### GOP.confirm(msg, callback)
 #### 功能描述
 确认提示弹框。
+
+#### 源代码
+```javascript
+/**
+ * 确认框
+ *
+ * @param message   确认信息
+ * @param callback  确认回调函数
+ */
+function confirm(message, callback) {
+    var dialog = BootstrapDialog.confirm({
+        title: '确认',
+        message: message,
+        type: BootstrapDialog.TYPE_WARNING,
+        btnOKLabel: '确认',
+        btnCancelLabel: '取消',
+        callback: function(result) {
+            if (!result) {
+                return dialog.close();
+            }
+            callback(dialog);
+        }
+    });
+}
+```
+
 #### 参数说明
-msg 提示信息
-callback 用户选择确认后的回调函数
+* msg 提示信息
+* callback 用户选择确认后的回调函数
 
 #### 使用示例
 ```javascript
@@ -90,6 +116,8 @@ GOP.confirm('确定要删除该记录？', function() {
    console.debug("do something");
 });
 ```
+#### 依赖库包
+[https://github.com/nakupanda/bootstrap3-dialog](https://github.com/nakupanda/bootstrap3-dialog)
 
 ### GOP.serializeForm2Json($form)
 #### 功能描述
