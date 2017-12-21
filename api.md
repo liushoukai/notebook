@@ -86,7 +86,7 @@ callback 用户选择确认后的回调函数
 
 #### 使用示例
 ```javascript
-GOP.confirm('确定要删除该记录？'， function() {
+GOP.confirm('确定要删除该记录？', function() {
    console.debug("do something");
 });
 ```
