@@ -1,5 +1,7 @@
 ### 接口说明
-GET http://wxjy-mingyang.mion.cn/volume/1
+#### GET http://wxjy-mingyang.mion.cn/volume/1 
+获取ID为1的试题册中试题的信息
+
 
 - code    返回码，其中success表示接口请求成功，failure表示接口请求失败（注意：接口请求超时等网络问题由前端显示提示内容）；
 - message 返回给用户提示信息；
