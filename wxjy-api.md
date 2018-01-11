@@ -12,6 +12,8 @@
 - testVolume.test_topics[0].test_sub_type 实际试题题型，以商定的为准；
 - testVolume.test_topics[0].test_optios[1].option_group 试题选项分组号；
 
+题型与题型子类型的组合关系表
+
 |test_type  |test_sub_type  |含义
 |-----------|---------------|----
 |2          |8              |阅读题
