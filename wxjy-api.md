@@ -5,8 +5,9 @@ GET http://wxjy-mingyang.mion.cn/volume/1
 - message 返回给用户提示信息；
 - testVolume 试题册信息，可以理解为试卷，包含多道试题信息，试题信息在test_topics素组中；
 - testVolume.test_topics[0] 包含试题信息；
-- testVolume.test_topics[0].test_options 包含试题选项信息；
-
+- testVolume.test_topics[0].test_options  包含试题选项信息；
+- testVolume.test_topics[0].test_type     代表试题题型，用于试题的分类（1填空题 2阅读题 3选择题 4逻辑题 5数学题 6作文题）；
+- testVolume.test_topics[0].test_sub_type 实际试题题型，以商定的为准；
 ```json
 {
   "code": "failure",
