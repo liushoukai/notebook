@@ -9,6 +9,20 @@ GET http://wxjy-mingyang.mion.cn/volume/1
 - testVolume.test_topics[0].test_type     代表试题题型，用于试题的分类（1填空题 2阅读题 3选择题 4逻辑题 5数学题 6作文题）；
 - testVolume.test_topics[0].test_sub_type 实际试题题型，以商定的为准；
 - testVolume.test_topics[0].test_optios[1].option_group 试题选项分组号；
+
+|test_type  |test_sub_type  |含义
+|-----------|---------------|----
+|2          |8              |阅读题
+|3          |2              |选择题-双空
+|3          |1              |选择题-单空
+|3          |3              |选择题-三空
+|3          |4              |选择题-6选2
+|5          |1              |数学题-单选
+|5          |7              |数学题-单空
+|5          |6              |数学题-分数
+|5          |4              |数学题-不定项
+|1          |5              |填空题
+
 ```json
 {
   "code": "failure",
