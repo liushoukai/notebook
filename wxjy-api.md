@@ -4,7 +4,8 @@ GET http://wxjy-mingyang.mion.cn/volume/1
 - code    返回码，其中success表示接口请求成功，failure表示接口请求失败（注意：接口请求超时等网络问题由前端显示提示内容）；
 - message 返回给用户提示信息；
 - testVolume 试题册信息，可以理解为试卷，包含多道试题信息，试题信息在test_topics素组中；
-
+- testVolume.test_topics[0] 包含试题信息；
+- testVolume.test_topics[0].test_options 包含试题选项信息；
 
 ```json
 {
