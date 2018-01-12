@@ -147,8 +147,12 @@
   }
 }
 ```
-#### POST http://wxjy-mingyang.mion.cn/volume/
+#### POST http://wxjy-mingyang.mion.cn/volume/answer
+点击上/下一步时提交用户答题与用时信息
+
 - test_volume_id    试题册ID
 - test_topic_id     当前试题ID
-- users_answer      用户答案
+- time_cost         答题耗时（秒）
+- users_answer      试题答案
+
 
