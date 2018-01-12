@@ -11,6 +11,7 @@
 - testVolume.test_topics[0].test_type     代表试题题型，用于试题的分类（1填空题 2阅读题 3选择题 4逻辑题 5数学题 6作文题）；
 - testVolume.test_topics[0].test_sub_type 实际试题题型，以商定的为准；
 - testVolume.test_topics[0].test_optios[1].option_group 试题选项分组号；
+- testVolume.test_topics[0].subTestTopics 阅读子试题信息，子试题结构与试题结构一致；
 
 题型与题型子类型的组合关系表
 
