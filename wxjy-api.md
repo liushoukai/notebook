@@ -155,4 +155,12 @@
 - time_cost         答题耗时（秒）
 - users_answer      试题答案
 
+#### POST http://wxjy-mingyang.mion.cn/mark
+添加试题标记
 
+- test_topic_id    当前试题ID
+
+#### POST http://wxjy-mingyang.mion.cn/unmark
+取消试题标记
+
+- test_topic_id     当前试题ID
