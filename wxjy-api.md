@@ -1,8 +1,11 @@
 ### 接口说明
-#### GET http://wxjy-mingyang.mion.cn/volume/1 
+#### GET http://wxjy-mingyang.mion.cn/volume/1?restart=1
 获取ID为1的试题册中试题的信息
 
+请求数据结构
+- restart 是否重做 1 是 0 否
 
+响应数据结构
 - code    返回码，其中success表示接口请求成功，failure表示接口请求失败（注意：接口请求超时等网络问题由前端显示提示内容）；
 - message 返回给用户提示信息；
 - testVolume 试题册信息，可以理解为试卷，包含多道试题信息，试题信息在test_topics素组中；
