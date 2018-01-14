@@ -6,12 +6,13 @@
 - code    返回码，其中success表示接口请求成功，failure表示接口请求失败（注意：接口请求超时等网络问题由前端显示提示内容）；
 - message 返回给用户提示信息；
 - testVolume 试题册信息，可以理解为试卷，包含多道试题信息，试题信息在test_topics素组中；
-- testVolume.test_topics[0] 包含试题信息；
+- testVolume.test_topics[0]               包含试题信息；
+- testVolume.test_topics[0].test_type     代表试题题型，用于试题的分类（参考以下关系表）；
+- testVolume.test_topics[0].test_sub_type 实际试题题型，用于试题的分类（参考以下关系表）；
 - testVolume.test_topics[0].test_options  包含试题选项信息；
-- testVolume.test_topics[0].test_type     代表试题题型，用于试题的分类（1填空题 2阅读题 3选择题 4逻辑题 5数学题 6作文题）；
-- testVolume.test_topics[0].test_sub_type 实际试题题型，以商定的为准；
 - testVolume.test_topics[0].test_optios[1].option_group 试题选项分组号；
 - testVolume.test_topics[0].subTestTopics 阅读子试题信息，子试题结构与试题结构一致；
+- testVolume.test_topics[0].is_marked     表示试题是否已标记（0 未标记 1 已标记）；
 
 题型与题型子类型的组合关系表
 
@@ -155,7 +156,7 @@
   }
 }
 ```
-#### POST http://wxjy-mingyang.mion.cn/volume/answer
+#### POST http://wxjy-mingyang.mion.cn/answer
 点击上/下一步时提交用户答题与用时信息
 
 - test_volume_id    试题册ID
@@ -166,9 +167,12 @@
 #### POST http://wxjy-mingyang.mion.cn/mark
 添加试题标记
 
-- test_topic_id    当前试题ID
+- test_volume_id    当前试题册ID
+- test_topic_id     当前试题ID
 
 #### POST http://wxjy-mingyang.mion.cn/unmark
 取消试题标记
 
-- test_topic_id     当前试题ID
+
+- test_volume_id    当前试题册ID
+- test_topic_id     当前试题ID
