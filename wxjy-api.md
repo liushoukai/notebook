@@ -1,4 +1,14 @@
 ### 接口说明
+
+### 标准结构
+|属性       |含义
+|-----------|-------------------
+|code       |返回码，code为0代表请求成功；code非0代表请求失败；
+|message    |返回给用户的提示信息；
+|data       |Payload有效载荷；
+
+### 接口列表
+
 #### GET http://wxjy-mingyang.mion.cn/volume/1?restart=1
 获取ID为1的试题册中试题的信息
 
